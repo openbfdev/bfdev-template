@@ -1,0 +1,14 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+/*
+ * Copyright(c) 2023 John Sanpe <sanpeqf@gmail.com>
+ */
+
+#ifndef __CONFIG__H__
+#define __CONFIG__H__
+
+#include <bfdev.h>
+
+#define PROJECT_NAME ${CMAKE_PROJECT_NAME}
+#define PROJECT_VERSION ${CMAKE_PROJECT_VERSION}
+
+#endif /* __CONFIG__H__ */
