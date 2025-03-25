@@ -8,6 +8,7 @@ project(bfdev-template VERSION "0.0.2" LANGUAGES C)
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 set(PROJECT_SOURCE_PATH ${PROJECT_SOURCE_DIR}/src)
+set(PROJECT_LIBRARY_PATH ${PROJECT_SOURCE_DIR}/lib)
 set(PROJECT_GENERATED_PATH ${PROJECT_BINARY_DIR}/generated)
 
 configure_file(
@@ -15,7 +16,7 @@ configure_file(
     ${PROJECT_GENERATED_PATH}/config.h
 )
 
-include(${CMAKE_MODULE_PATH}/bfdev.cmake)
+include(${PROJECT_LIBRARY_PATH}/bfdev/bfdev.cmake)
 include_directories(${PROJECT_GENERATED_PATH})
 
 add_executable(helloworld ${PROJECT_SOURCE_PATH}/main.c)
